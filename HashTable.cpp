@@ -82,8 +82,6 @@ public:
                     i = 0; // reset
                 }
                 probeCount++;
-
-                cout << "pos + " << i << ", Probe Count: " << probeCount << endl;
             }
             else
             {
