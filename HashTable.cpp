@@ -77,7 +77,7 @@ public:
             {
                 index = (index + i * i) % m; // quadratic probing
                 if (probeCount == (m + 1) / 2)
-                    cout << "Max probing limit reached!" << endl;
+                    //cout << "Max probing limit reached!" << endl;
                 probeCount++;
             }
             else
@@ -111,8 +111,10 @@ public:
             {
                 index = (index + i * i) % m; // quadratic probing
                 if (probeCount == (m + 1) / 2)
-                    cout << "Max probing limit reached!" << endl;
+                    //cout << "Max probing limit reached!" << endl;
                 probeCount++;
+
+                //cout << "Next Probe: " << index << " Probe Count: " << probeCount << endl;
             }
             else
             {
@@ -140,7 +142,7 @@ public:
             {
                 index = (index + i * i) % m; // quadratic probing
                 if (probeCount == (m + 1) / 2)
-                    cout << "Max probing limit reached!" << endl;
+                    //cout << "Max probing limit reached!" << endl;
                 probeCount++;
             }
             else
