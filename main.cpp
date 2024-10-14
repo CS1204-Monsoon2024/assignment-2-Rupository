@@ -17,8 +17,14 @@ int main() {
     ht.printTable();
     ht.insert(29);  
     ht.printTable(); 
+    ht.insert(71);
+    ht.printTable();
+    ht.insert(13);
+    ht.printTable();
+    ht.insert(4);
+    ht.printTable();
 
-    int find = ht.search(22);
+    int find = ht.search(13);
     std::cout << "Found at:" << find << std::endl;
 
     return 0;
