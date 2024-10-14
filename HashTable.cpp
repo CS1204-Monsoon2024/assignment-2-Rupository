@@ -77,9 +77,13 @@ public:
             {
                 index = (h(k) + i * i) % m; // quadratic probing
                 if (probeCount == (m + 1) / 2)
+                {
                     cout << "Max probing limit reached!" << endl;
                     i = 0; // reset
+                }
                 probeCount++;
+
+                cout << "pos + " << i << ", Probe Count: " << probeCount << endl;
             }
             else
             {
@@ -112,8 +116,10 @@ public:
             {
                 index = (h(k) + i * i) % m; // quadratic probing
                 if (probeCount == (m + 1) / 2)
+                {
                     cout << "Max probing limit reached!" << endl;
                     i = 0; // reset
+                }
                 probeCount++;
 
             }
@@ -143,8 +149,10 @@ public:
             {
                 index = (h(k) + i * i) % m; // quadratic probing
                 if (probeCount == (m + 1) / 2)
+                {
                     cout << "Max probing limit reached!" << endl;
                     i = 0; // reset
+                }
                 probeCount++;
             }
             else
