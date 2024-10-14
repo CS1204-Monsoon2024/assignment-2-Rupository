@@ -75,14 +75,15 @@ public:
             i++;
             if (probeCount <= (m + 1) / 2)
             {
-                index = (index + i * i) % m; // quadratic probing
+                index = (h(k) + i * i) % m; // quadratic probing
                 if (probeCount == (m + 1) / 2)
-                    //cout << "Max probing limit reached!" << endl;
+                    cout << "Max probing limit reached!" << endl;
+                    i = 0; // reset
                 probeCount++;
             }
             else
             {
-                index = (index + i) % m; // default to linear probe which will not loop
+                index = (h(k) + i) % m; // default to linear probe which will not loop
             }
         }
 
@@ -109,16 +110,16 @@ public:
             i++;
             if (probeCount <= (m + 1) / 2)
             {
-                index = (index + i * i) % m; // quadratic probing
+                index = (h(k) + i * i) % m; // quadratic probing
                 if (probeCount == (m + 1) / 2)
-                    //cout << "Max probing limit reached!" << endl;
+                    cout << "Max probing limit reached!" << endl;
+                    i = 0; // reset
                 probeCount++;
 
-                //cout << "Next Probe: " << index << " Probe Count: " << probeCount << endl;
             }
             else
             {
-                index = (index + i) % m; // default to linear probe which will not loop
+                index = (h(k) + i) % m; // default to linear probe which will not loop
             }
         }
 
@@ -140,14 +141,15 @@ public:
             i++;
             if (probeCount <= (m + 1) / 2)
             {
-                index = (index + i * i) % m; // quadratic probing
+                index = (h(k) + i * i) % m; // quadratic probing
                 if (probeCount == (m + 1) / 2)
-                    //cout << "Max probing limit reached!" << endl;
+                    cout << "Max probing limit reached!" << endl;
+                    i = 0; // reset
                 probeCount++;
             }
             else
             {
-                index = (index + i) % m; // default to linear probe which will not loop
+                index = (h(k) + i) % m; // default to linear probe which will not loop
             }
         }
 
