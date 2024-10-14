@@ -133,7 +133,6 @@ public:
         {
             if (table[index]->key == k)
             {
-                cout << "here" << endl;
                 return index; // return index at which it is found
             }
             i++;
