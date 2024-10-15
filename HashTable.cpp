@@ -55,7 +55,6 @@ public:
 
     void insert(int k)
     {
-        cout << alpha << endl;
         if (alpha > 0.8)
         {
             resize();
