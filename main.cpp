@@ -29,7 +29,6 @@ int main() {
     ht.printTable();
     ht.remove(7);
     ht.printTable();
-
     ht.insert(23);
     ht.insert(7);
     ht.printTable();

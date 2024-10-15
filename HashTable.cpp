@@ -36,7 +36,7 @@ class HashTable
 {
     int m;            // size of the table
     int n;            // number of keys
-    double alpha;      // load factor
+    double alpha;     // load factor
     HashNode **table; // array of pointers to HashNode
 
 public:
@@ -53,10 +53,9 @@ public:
         }
     }
 
-    void insert(int k) 
+    void insert(int k)
     {
-        cout << "insert " << k << endl;
-        if (alpha > 0.8)
+        if (alpha >= 0.8)
         {
             resize();
         }
@@ -74,7 +73,7 @@ public:
             }
 
             i++;
-            
+
             index = (h(k) + i * i) % m; // quadratic probing
             if (probeCount == (m + 1) / 2)
             {
@@ -82,7 +81,6 @@ public:
                 return;
             }
             probeCount++;
-            
         }
 
         table[index] = new HashNode(k, k); // insert a new node. the key of the value is the value itself.
@@ -92,7 +90,6 @@ public:
 
     void remove(int k)
     {
-        cout << "remove " << k << endl;
         int index = h(k);
         int i = 0;
 
@@ -110,7 +107,6 @@ public:
             // does not need max probe limit condition, as the
             // every position due to insert is correctly mapped
             // to the quadratic probing positions.
-
         }
 
         cout << "Element not found" << endl;
@@ -118,7 +114,6 @@ public:
 
     int search(int k)
     {
-        cout << "search " << k << endl;
         int index = h(k);
         int i = 0;
 
@@ -193,7 +188,6 @@ private:
 
                 table[index] = oldTable[i]; // Move the node to the new table
             }
-
         }
 
         delete[] oldTable; // free the old table
