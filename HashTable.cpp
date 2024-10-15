@@ -77,9 +77,8 @@ public:
             index = (h(k) + i * i) % m; // quadratic probing
             if (probeCount == (m + 1) / 2)
             {
-                cout << "Max probing limit reached!" << endl;
-                resize(); // resize and rehash, preventing an infinite loop
-                index = h(k); // reset index to new hash function 
+                cout << "Max probing limit reached!" << endl; // insertion failed!
+                return;
             }
             probeCount++;
             

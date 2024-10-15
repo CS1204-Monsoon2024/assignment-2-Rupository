@@ -21,6 +21,18 @@ int main() {
     ht.printTable();
     ht.insert(7);
     ht.printTable();
+    ht.insert(1);
+    ht.printTable();
+    ht.insert(10);
+    ht.printTable();
+    ht.insert(4);
+    ht.printTable();
+    ht.remove(7);
+    ht.printTable();
+
+    ht.insert(23);
+    ht.printTable();
+    
 
     //cout << "Found at: " << ht.search(21) << endl;
 
