@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool is_prime(int n)
+bool is_prime(int n) // returns whether prime or not
 {
     if (n < 2)
         return false;
@@ -150,12 +150,12 @@ public:
     }
 
 private:
-    int h(int k)
+    int h(int k) // hash function
     {
         return k % m;
     }
 
-    void resize()
+    void resize() // dynamic resizing
     {
         int oldSize = m;
         m = 2 * oldSize + 1;
