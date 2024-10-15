@@ -36,7 +36,7 @@ class HashTable
 {
     int m;            // size of the table
     int n;            // number of keys
-    float alpha;      // load factor
+    double alpha;      // load factor
     HashNode **table; // array of pointers to HashNode
 
 public:
@@ -55,6 +55,7 @@ public:
 
     void insert(int k)
     {
+        cout << alpha << endl;
         if (alpha > 0.8)
         {
             resize();

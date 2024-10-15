@@ -1,24 +1,27 @@
 #include "HashTable.cpp"
 
 int main() {
-    int initialSize = 17; 
+    int initialSize = 5; 
     HashTable ht(initialSize);
 
     // Example test case
-    ht.insert(13);
-    ht.printTable();
     ht.insert(3);
     ht.printTable();
-    ht.remove(3);
+    ht.insert(12);
     ht.printTable();
-    ht.insert(20);
+    ht.insert(9);
     ht.printTable();
-    ht.insert(4);
+    ht.insert(1);
     ht.printTable();
-    ht.insert(21);
+    ht.remove(1);
+    ht.printTable();
+    ht.insert(6);
     ht.printTable();
 
-    cout << "Found at: " << ht.search(21) << endl;
+    ht.insert(5);
+    ht.printTable();
+
+    //cout << "Found at: " << ht.search(21) << endl;
 
     return 0;
 }
