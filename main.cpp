@@ -1,4 +1,4 @@
-#include "HashTable.cpp"
+#include "hashtable.cpp"
 
 int main() {
     int initialSize = 5; 
@@ -30,6 +30,9 @@ int main() {
     ht.remove(7);
     ht.printTable();
 
+    ht.insert(23);
+    ht.insert(7);
+    ht.printTable();
     ht.insert(23);
     ht.printTable();
     

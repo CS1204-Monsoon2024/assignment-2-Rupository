@@ -53,8 +53,9 @@ public:
         }
     }
 
-    void insert(int k)
+    void insert(int k) 
     {
+        cout << "insert " << k << endl;
         if (alpha > 0.8)
         {
             resize();
@@ -91,6 +92,7 @@ public:
 
     void remove(int k)
     {
+        cout << "remove " << k << endl;
         int index = h(k);
         int i = 0;
 
@@ -116,6 +118,7 @@ public:
 
     int search(int k)
     {
+        cout << "search " << k << endl;
         int index = h(k);
         int i = 0;
 
