@@ -15,6 +15,8 @@ int main() {
     ht.printTable();
     ht.insert(29);
     ht.printTable();
+    ht.insert(29);
+    ht.printTable();
 
     return 0;
 }

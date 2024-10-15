@@ -73,20 +73,16 @@ public:
             }
 
             i++;
-            if (probeCount <= (m + 1) / 2)
+            
+            index = (h(k) + i * i) % m; // quadratic probing
+            if (probeCount == (m + 1) / 2)
             {
-                index = (h(k) + i * i) % m; // quadratic probing
-                if (probeCount == (m + 1) / 2)
-                {
-                    cout << "Max probing limit reached!" << endl;
-                    i = 0; // reset
-                }
-                probeCount++;
+                cout << "Max probing limit reached!" << endl;
+                resize(); // resize and rehash, preventing an infinite loop
+                index = h(k); // reset index to new hash function 
             }
-            else
-            {
-                index = (h(k) + i) % m; // default to linear probe which will not loop
-            }
+            probeCount++;
+            
         }
 
         table[index] = new HashNode(k, k); // insert a new node. the key of the value is the value itself.
@@ -99,7 +95,6 @@ public:
         int index = h(k);
         int i = 0;
 
-        int probeCount = 0;
         while (table[index] != nullptr)
         {
             if (table[index]->key == k)
@@ -110,21 +105,11 @@ public:
                 return;
             }
             i++;
-            if (probeCount <= (m + 1) / 2)
-            {
-                index = (h(k) + i * i) % m; // quadratic probing
-                if (probeCount == (m + 1) / 2)
-                {
-                    cout << "Max probing limit reached!" << endl;
-                    i = 0; // reset
-                }
-                probeCount++;
+            index = (h(k) + i * i) % m; // quadratic probing
+            // does not need max probe limit condition, as the
+            // every position due to insert is correctly mapped
+            // to the quadratic probing positions.
 
-            }
-            else
-            {
-                index = (h(k) + i) % m; // default to linear probe which will not loop
-            }
         }
 
         cout << "Element not found" << endl;
@@ -135,7 +120,6 @@ public:
         int index = h(k);
         int i = 0;
 
-        int probeCount = 0;
         while (table[index] != nullptr)
         {
             if (table[index]->key == k)
@@ -143,20 +127,11 @@ public:
                 return index; // return index at which it is found
             }
             i++;
-            if (probeCount <= (m + 1) / 2)
-            {
-                index = (h(k) + i * i) % m; // quadratic probing
-                if (probeCount == (m + 1) / 2)
-                {
-                    cout << "Max probing limit reached!" << endl;
-                    i = 0; // reset
-                }
-                probeCount++;
-            }
-            else
-            {
-                index = (h(k) + i) % m; // default to linear probe which will not loop
-            }
+            i++;
+            index = (h(k) + i * i) % m; // quadratic probing
+            // does not need max probe limit condition, as the
+            // every position due to insert is correctly mapped
+            // to the quadratic probing positions.
         }
 
         return -1; // not found
