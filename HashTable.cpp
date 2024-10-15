@@ -127,7 +127,6 @@ public:
                 return index; // return index at which it is found
             }
             i++;
-            i++;
             index = (h(k) + i * i) % m; // quadratic probing
             // does not need max probe limit condition, as the
             // every position due to insert is correctly mapped
