@@ -17,8 +17,9 @@ int main() {
     ht.printTable();
     ht.insert(6);
     ht.printTable();
-
     ht.insert(5);
+    ht.printTable();
+    ht.insert(7);
     ht.printTable();
 
     //cout << "Found at: " << ht.search(21) << endl;

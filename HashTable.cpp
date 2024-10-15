@@ -87,7 +87,7 @@ public:
 
         table[index] = new HashNode(k, k); // insert a new node. the key of the value is the value itself.
         n++;
-        alpha = float(n) / float(m); // recalculate alpha
+        alpha = double(n) / double(m); // recalculate alpha
     }
 
     void remove(int k)
